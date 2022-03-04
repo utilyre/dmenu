@@ -48,7 +48,7 @@ ResourcePref resources[] = {
 	{ "foreground_sel", STRING, &selfgcolor           },
 	{ "background_sel", STRING, &selbgcolor           },
   { "background_nrm", STRING, &normhighlightbgcolor },
-	{ "highlight",      STRING, &normhighlightfgcolor },
+	{ "background_sel", STRING, &normhighlightfgcolor },
 	{ "background_sel", STRING, &selhighlightbgcolor  },
 	{ "foreground_sel", STRING, &selhighlightfgcolor  },
 };
