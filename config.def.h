@@ -6,16 +6,24 @@ static int fuzzy = 1;                      /* -F  option; if 0, dmenu doesn't us
 static int centered = 1;                    /* -c option; centers dmenu on screen */
 static int min_width = 500;                    /* minimum width when centered */
 /* -fn option overrides fonts[0]; default X11 font or font set */
-static const char *fonts[] = {
-	"monospace:size=10"
-};
+static char font[] = "monospace:size=10";
+static const char *fonts[] = { font };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
+
+static char normfgcolor[] = "#bbbbbb";
+static char normbgcolor[] = "#222222";
+static char selfgcolor[]  = "#eeeeee";
+static char selbgcolor[]  = "#005577";
+static char normhighlightbgcolor[]  = "#ffc978";
+static char normhighlightfgcolor[]  = "#222222";
+static char selhighlightbgcolor[]  = "#ffc978";
+static char selhighlightfgcolor[]  = "#005577";
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#222222" },
-	[SchemeSel] = { "#eeeeee", "#005577" },
-	[SchemeSelHighlight] = { "#ffc978", "#005577" },
-	[SchemeNormHighlight] = { "#ffc978", "#222222" },
+	[SchemeNorm] = { normfgcolor, normbgcolor },
+	[SchemeSel] = { selfgcolor, selbgcolor },
+	[SchemeNormHighlight] = { normhighlightfgcolor, normhighlightbgcolor },
+	[SchemeSelHighlight] = { selhighlightfgcolor, selhighlightbgcolor },
 	[SchemeOut] = { "#000000", "#00ffff" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
@@ -29,3 +37,18 @@ static const char worddelimiters[] = " ";
 
 /* Size of the window border */
 static const unsigned int border_width = 2;
+
+/*
+ * Xresources preferences to load at startup
+ */
+ResourcePref resources[] = {
+	{ "font",           STRING, &font                 },
+	{ "foreground_nrm", STRING, &normfgcolor          },
+	{ "background_nrm", STRING, &normbgcolor          },
+	{ "foreground_sel", STRING, &selfgcolor           },
+	{ "background_sel", STRING, &selbgcolor           },
+  { "background_nrm", STRING, &normhighlightbgcolor },
+	{ "highlight",      STRING, &normhighlightfgcolor },
+	{ "background_sel", STRING, &selhighlightbgcolor  },
+	{ "foreground_sel", STRING, &selhighlightfgcolor  },
+};
