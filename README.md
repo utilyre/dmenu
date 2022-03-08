@@ -1,5 +1,7 @@
 # Dmenu
 
+A generic menu for X.
+
 ## Table of Contents
 
 * [Patches](#patches) 
