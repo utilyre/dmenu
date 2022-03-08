@@ -6,8 +6,6 @@ A generic menu for X.
 
 * [Patches](#patches) 
 * [Installation](#installation) 
-  * [AUR](#aur)
-  * [Manual](#manual)
 
 ## Patches
 
@@ -21,25 +19,8 @@ A generic menu for X.
 
 ## Installation
 
-### AUR
-
-In case of yay:
+Install the AUR package:
 
 ```sh
 yay --sync "utilyre-dmenu-git"
-```
-
-### Manual
-
-Clone the repository and hop into it:
-
-```sh
-git clone "https://github.com/utilyre/dmenu.git"
-cd "./dmenu"
-```
-
-Then build and install the package:
-
-```sh
-makepkg --syncdeps --rmdeps --install
 ```
