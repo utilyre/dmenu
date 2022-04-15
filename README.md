@@ -16,6 +16,7 @@ A generic menu for X.
 * [fuzzyhighlight](https://tools.suckless.org/dmenu/patches/fuzzyhighlight) 
 * [xresources alt](https://tools.suckless.org/dmenu/patches/xresources-alt) 
 * [lines below prompt](https://tools.suckless.org/dmenu/patches/lines-below-prompt) 
+* [case insensitive](https://tools.suckless.org/dmenu/patches/case-insensitive) 
 
 ## Installation
 
